@@ -1,6 +1,7 @@
 package geometrical_shapes;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Line implements Drawable {
     private Point p1, p2;
@@ -9,6 +10,18 @@ public class Line implements Drawable {
     public Line(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;
+    }
+      public Line() {
+         Line randLine = random(1000, 1000);
+        this.p1 = randLine.p1;
+        this.p2 = randLine.p2;
+    }
+
+    public static Line random(int width, int height) {
+        Random rand = new Random();
+        Point p1 = new Point(rand.nextInt(width), rand.nextInt(height));
+        Point p2 = new Point(rand.nextInt(width), rand.nextInt(height));
+        return new Line(p1, p2);
     }
 
     @Override
@@ -40,9 +53,10 @@ public class Line implements Drawable {
             }
         }
     }
+
     @Override
     public Color getColor() {
         return color;
     }
-  
+
 }
