@@ -5,16 +5,11 @@ import java.util.Random;
 
 public class Line implements Drawable {
     private Point p1, p2;
-    private Color color = Color.WHITE;
+  
 
     public Line(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;
-    }
-      public Line() {
-         Line randLine = random(1000, 1000);
-        this.p1 = randLine.p1;
-        this.p2 = randLine.p2;
     }
 
     public static Line random(int width, int height) {
@@ -37,11 +32,8 @@ public class Line implements Drawable {
         int sy = y1 < y2 ? 1 : -1;
         int err = dx - dy;
 
-        while (true) {
-            Point p = new Point(x1, y1);
-            p.draw(displayable);
-            if (x1 == x2 && y1 == y2)
-                break;
+        while (x1 != x2 && y1 != y2) {
+              displayable.display(x1, y1, getColor());
             int e2 = 2 * err;
             if (e2 > -dy) {
                 err -= dy;
@@ -56,7 +48,7 @@ public class Line implements Drawable {
 
     @Override
     public Color getColor() {
-        return color;
+        return  Color.RED;
     }
 
 }

@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class Point implements Drawable {
     private int x, y;
-  private Color color = Color.WHITE;
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
@@ -26,12 +25,12 @@ public class Point implements Drawable {
 
     @Override
     public void draw(Displayable displayable) {
-          displayable.display(x, y, color);
+          displayable.display(x, y, getColor());
     }
 
     @Override
     public Color getColor() {
-        return color;
+        return Color.WHITE;
     }
 
 }
