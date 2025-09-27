@@ -25,7 +25,8 @@ public class Line implements Drawable {
         int err = dx - dy;
 
         while (true) {
-            displayable.display(x1, y1, color);
+            Point p = new Point(x1, y1);
+            p.draw(displayable);
             if (x1 == x2 && y1 == y2)
                 break;
             int e2 = 2 * err;
