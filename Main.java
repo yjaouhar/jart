@@ -22,8 +22,8 @@ public class Main {
     public static void main(String[] args) {
         int width = 1000, height = 1000;
         Image image = new Image(width, height);
-        // Line line = new Line(Point.random(width, height), Point.random(width, height));
-        // line.draw(image);
+        Line line = Line.random(width, height);
+        line.draw(image);
         Triangle triangle = new Triangle(new Point(100, 100), new Point(500, 500), new Point(100, 500));
         triangle.draw(image);
 
