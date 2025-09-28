@@ -1,10 +1,6 @@
-import java.awt.*;
-
 import geometrical_shapes.Line;
 
-import geometrical_shapes.Point;
-import geometrical_shapes.Rectangle;
-import geometrical_shapes.Triangle;
+import geometrical_shapes.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,10 +13,10 @@ public class Main {
         Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
         rectangle.draw(image);
 
-        // for (int i = 0; i < 50; i++) {
-        // Circle circle = Circle.random(image.getWidth(), image.getHeight());
-        // circle.draw(image);
-        // }
+        for (int i = 0; i < 4; i++) {
+        Circle circle = Circle.random(image.getWidth(), image.getHeight());
+        circle.draw(image);
+        }
         image.save("image.png");
     }
 }
