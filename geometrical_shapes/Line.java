@@ -25,14 +25,16 @@ public class Line implements Drawable {
         int y1 = p1.getY();
         int x2 = p2.getX();
         int y2 = p2.getY();
-
+        
         int dx = Math.abs(x2 - x1);
         int dy = Math.abs(y2 - y1);
         int sx = x1 < x2 ? 1 : -1;
         int sy = y1 < y2 ? 1 : -1;
         int err = dx - dy;
-
-        while (x1 != x2 && y1 != y2) {
+        
+        while (x1 != x2 || y1 != y2) {
+            System.out.println(x1);
+            System.out.println(x2);
               displayable.display(x1, y1, getColor());
             int e2 = 2 * err;
             if (e2 > -dy) {
