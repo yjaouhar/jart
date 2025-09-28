@@ -13,7 +13,7 @@ public class Main {
         Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
         rectangle.draw(image);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 50; i++) {
         Circle circle = Circle.random(image.getWidth(), image.getHeight());
         circle.draw(image);
         }

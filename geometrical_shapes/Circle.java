@@ -12,7 +12,8 @@ public class Circle implements Drawable {
     public Circle(Point center, int radius) {
         this.center = center;
         this.radius = radius;
-        this.color = Color.GREEN;
+        Random rand = new Random();
+        this.color = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
     }
     
     public Circle(Point center, int radius, Color color) {
@@ -36,9 +37,7 @@ public class Circle implements Drawable {
         int x = 0;
         int y = -radius;
         int d = -radius;
-        
-        // drawCirclePoints(displayable, centerX, centerY, x, y);
-        
+
         while (x < -y) {
             if (d > 0) {
                 y++;
