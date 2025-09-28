@@ -6,18 +6,6 @@ import geometrical_shapes.Point;
 import geometrical_shapes.Rectangle;
 import geometrical_shapes.Triangle;
 
-interface Displayable {
-    void display(int x, int y, Color color);
-
-    void save(String string);
-}
-
-interface Drawable {
-    void draw(Displayable displayable);
-
-    Color getColor();
-}
-
 public class Main {
     public static void main(String[] args) {
         int width = 1000, height = 1000;
