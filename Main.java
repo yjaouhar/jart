@@ -24,7 +24,7 @@ public class Main {
         Image image = new Image(width, height);
         Line line = Line.random(width, height);
         line.draw(image);
-        Triangle triangle = new Triangle(new Point(100, 100), new Point(500, 500), new Point(100, 500));
+        Triangle triangle = new Triangle(new Point(100, 100), new Point(900, 900), new Point(100, 900));
         triangle.draw(image);
         Rectangle rectangle = new Rectangle(new Point(50, 50), new Point(300, 200));
         rectangle.draw(image);
